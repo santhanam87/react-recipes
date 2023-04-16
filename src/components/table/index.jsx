@@ -1,14 +1,17 @@
-import Row from "./row";
+import AddTableForm from "../AddTableForm/AddTableForm";
+import { useState } from "react";
+import { generateTable } from "./table.utils";
 
 function Table({ rows }) {
+  const [tableData, setTableData] = useState({});
+  const onTableInputChange = ({rows, columns}) => {
+    setTableData(generateTable(rows, columns))
+  }
   return (
-    <table className='mergeTable'>
-      <tbody>
-        {rows.map((row, index) => (
-          <Row key={index} rowIndex={index} columns={row} />
-        ))}
-      </tbody>
-    </table>
+    <>
+    <AddTableForm onFormSubmit={onTableInputChange} />
+    <pre>{JSON.stringify(tableData)}</pre>
+    </>
   );
 }
 
