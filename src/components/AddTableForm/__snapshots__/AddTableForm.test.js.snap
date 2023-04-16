@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTableForm should match the snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="form-container"
+  >
+    <div
+      class="form-container"
+    >
+      <label>
+        Rows
+      </label>
+      <input
+        type="number"
+        value="0"
+      />
+    </div>
+    <div
+      class="form-container"
+    >
+      <label>
+        Columns
+      </label>
+      <input
+        type="number"
+        value="0"
+      />
+    </div>
+    <input
+      type="submit"
+      value="submitForm"
+    />
+  </form>
+</DocumentFragment>
+`;
